@@ -1,0 +1,44 @@
+\documentclass[11pt]{article}
+\usepackage{setspace}
+\usepackage[letterpaper,top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
+\usepackage[parfill]{parskip}
+
+\title{Dependable Software}
+\author{James Eason}
+\date{29 January 2018}
+
+\begin{document}
+\maketitle
+
+\thispagestyle{empty}
+
+\begin{doublespace}
+  \section{Introduction}
+
+In 2001, an FDA-certified radiation therapy machine in Panama failed due to poorly engineered software, resulting in several fatal overdoses \cite{jackson2009}. Cases such as this emphasize the need for dependable software. Testing and other good development practices are necessary and can improve dependability, but they do not guarantee it. A system cannot be considered dependable without clear and direct evidence.
+
+  \section{Background}
+
+Testing is an essential part of the development process, and for some noncritical systems it may be sufficient. As the need for dependability increases, however, so does the difficulty and cost of sufficient testing \cite{jackson2009}. In most cases, it is not practical to exhaustively test the entire state space of a large system \cite{jackson2009}. Alternatively, Jackson suggests a direct approach where ``the desired dependability goal is explicitly articulated as a collection of claims that the system has some critical properties'' \cite{jackson2009}. A dependability case is used to argue that the software establishes these critical properties.
+
+It is important not to confuse critical properties with specific functions of the system. An example described by Jackson involves a radiotherapy machine. A critical property might be ``the patient does not receive an excessive dose'', rather than ``the correct signal is conveyed to the beam generating device'' \cite{jackson2009}. This distinction is necessary because a function often does not sufficiently establish the critical property, which could lead to errors.
+
+The dependability case should be constructed to have certain characteristics. First, it should be auditable, or easily evaluated by a third party \cite{jackson2009}. Second, it should be complete in establishing the critical properties, noting any assumptions \cite{jackson2009}. Finally, it should be sound, meaning that it should not claim complete correctness on the basis of nonexhaustive testing \cite{jackson2009}. Without these characteristics, a dependability case cannot successfully establish the critical properties.
+
+  \section{Analysis}
+  
+It can be argued that since following a good development process does not guarantee dependability, there is no purpose of studying software processes. The ideas presented by Jackson would refute this claim.  Jackson argues that a rigorous process is necessary to ensure that the dependability case is given the required attention \cite{jackson2009}. Another advantage of a good development process mentioned by Jackson is naming conventions, which can make it possible to extract cross-referencing and summarization information \cite{jackson2009}. Although a good development process does not guarantee dependability, Jackson emphasizes that it is still necessary \cite{jackson2009}.
+
+Some of Jackson's ideas align with Denning's 2008 paper, while others do not. Both Jackson and Denning discuss the advantages of modularity, decoupling, and simplicity, but they are at odds regarding preplanning \cite{jackson2009,denning2008}. Denning emphasizes that minimal preplanning is ideal, using Linux and the internet as examples of successes which did not have a central preplanning process \cite{denning2008}. Alternatively, Jackson argues that the critical properties must be identified, the level of confidence must be established, and dependencies must be identified prior to development \cite{jackson2009}. Jackson's focus on critical systems leads to an emphasis on dependability, while Denning focuses more on functionality, speed, and cost.
+
+
+  \section{Conclusion}
+
+Utilizing good development processes, tools, and techniques is necessary but not sufficient to produce dependable software. Rather, developers must produce direct evidence of dependability. A dependability case can be used to verify a system's dependability by establishing the critical properties of a system. With the critical properties established, there is clear evidence that the system can be trusted to perform its function.
+
+\end{doublespace}
+
+\bibliographystyle{ieeetr}
+\bibliography{sebibliography}
+
+\end{document}

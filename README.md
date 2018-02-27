@@ -1,2 +1,2 @@
-# cs370
-Repository for CS 370 - Software Engineering
+# CS 370 - Software Engineering
+Contains assignments from CS370

@@ -1,0 +1,74 @@
+\documentclass[11pt]{article}
+
+\usepackage[letterpaper,top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage{url}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+  \Large{\textbf{StrikEm!\ Bowling Scoring Application Requirements}\\}
+\end{center}
+
+\section{Preface}
+
+\begin{enumerate}
+\item[1] Document Purpose: This document contains the requirements for
+  the StrikEm! bowling scoring application to be developed by Acme Widgets LLC
+  (Acme) for Bowling Users Group Inc (BUG).
+\item[2] Document Audience: Acme developers, Acme managers, BUG acquisitions
+  personnel, BUG StrikEm!\ app steering team
+\item[3] Version: January 31, 2018
+\item[4] Document Owner: Acme Team Beta
+\item[5] Document Contact: James Eason \url{<jae8547@truman.edu>}
+\end{enumerate}
+
+\section{StrikEm!\ Overview}
+\begin{enumerate}
+\item[1] This system will provide users with an easy way to keep score during a bowling game and access the scores of previous games.
+\item[2] The user may add up to six bowlers to a game and input their scores for each throw. The system will keep track of scores and indicate the winner at the end of the game.
+\item[3] The intended users for this application range from beginner bowlers who may need help calculating their score to professional bowlers aiming to keep a record of their previous games.
+\end{enumerate}
+
+\section{StrikEm!\ Critical Properties}
+\begin{enumerate}
+\item[1] The system must keep accurate scores for all bowlers.
+\item[2] The system must have the ability to view and edit scores for all rounds of all bowlers.
+\item[3] The system must support one to six bowlers in a game.
+\item[4] The system must be able to determine the winner at the end of a game.
+\item[5] The system must be able to access and display data from previous games.
+\end{enumerate}
+
+\section{StrikEm!\ Functional Requirements}
+\subsection{GUI}
+\begin{enumerate}
+\item[1] The system shall display scores for two throws for all ten rounds, with the exception of the last round which may display up to three throws.
+\item[2] For each throw, the system shall display X for a strike, a backslash for a spare, or the number of pins knocked down in all other cases.
+\item[3] The system shall display a bowler's score so far at each round, which is calculated by adding the score of the current round and all previous rounds.
+\item[4] The system shall provide access to the scores of previous games.
+\item[5] The system shall indicate the winner of a game after all scores have been entered.
+\end{enumerate}
+\subsection{Scoring}
+\begin{enumerate}
+\item[1] The system shall award a bowler points equivalent to how many pins they have knocked down at the end of each round.
+\item[2] The system shall indicate a strike if all pins are knocked down after the first throw of a round. The score of the next two throws shall be added to the bowler's score.
+\item[3] The system shall indicate a spare if all pins are knocked down after the second throw of a round. The score of the next throw shall be added to the bowler's score.
+\item[4] In the case of a spare or strike, the final round shall be extended by one or two more throws, respectively.
+\item[5] The system shall determine the winner based on which bowler has the most points.
+\end{enumerate}
+
+\subsection{Data Entry}
+\begin{enumerate}
+\item[1] The system shall allow the user to enter or modify scores for any throw. 
+\item[2] The system shall allow the user to add or remove bowlers at any point in the game.
+\item[3] The system shall allow the user to specify a name for each bowler.
+\item[4] The system shall allow the user to modify the turn order of the current bowlers.
+\end{enumerate}
+
+\section{StrikEm!\ Non-Functional Requirements}
+\begin{enumerate}
+\item[1] The system shall be compatable with android and apple operating systems
+\item[2] The system shall not require an internet connection
+\end{enumerate}
+
+\end{document}

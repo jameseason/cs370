@@ -1,0 +1,56 @@
+\documentclass[11pt]{article}
+\usepackage{setspace}
+\usepackage[letterpaper,top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
+\usepackage[parfill]{parskip}
+
+\title{Evolutionary System Development and the Classic Development Phases}
+\author{James Eason}
+\date{22 January 2018}
+
+\begin{document}
+\maketitle
+
+\thispagestyle{empty}
+
+\begin{doublespace}
+  \section{Introduction}
+
+Despite the opinions of early computer scientists such as Fritz Bauer that 
+``a rigorous engineering approach is needed'' to deliver dependable and usable software, 
+this lengthy process of thorough preplanning with detailed specifications
+is not a practical software development method \cite{denning2008}. Denning et al.\ argue that 
+using agile, an evolutionary design approach, is superior to preplanning regardless
+of the size or desired reliability of the system \cite{denning2008}. The classic development phases, 
+while still relevant, are less rigid in evolutionary system development compared to traditional preplanning.
+
+  \section{Background}
+
+The traditional preplanning approach is flawed because it is not adaptable. 
+The FBI virtual case file and the replacement FAA air traffic control system are 
+two examples of systems which failed because the development time was longer
+than the environment change time \cite{denning2008}. Due to the lack of adaptability during the development
+process, these systems were obsolete before they could be released \cite{denning2008}.
+
+Evolutionary system development, alternatively, does not include a formal preplanning process,
+only a general notion of the system architecture \cite{denning2008}. It allows adaptability for changing requirements and uses a modular approach, where components that do not work well are abandoned \cite{denning2008}. This allows and encourages 
+risks which have the potential to yield superior results compared to a more conservative preplanned approach.
+
+  \section{Analysis}
+  
+In classic development, the development phases are requirements, specifications, design, implementation, integration, and maintenance \cite{beck118}, and they are followed in order. 
+In agile development, the phases must be more flexible and adaptable. Maintenence, for example, is 
+done throughout the development process, so it is less of a distinct phase. Additionally, since requirements may be changed in agile development,
+ the rest of the phases must be repeated with every change. As a result, there may not be a single phase which defines the 
+progress or status of the project.  
+
+
+  \section{Conclusion}
+
+Overall, evolutionary system development is superior to traditional preplanning due to its adaptability. Both incorporate the classic development phases, but evolutionary system development does so in a less rigid way.
+
+\end{doublespace}
+
+\bibliographystyle{ieeetr}
+\bibliography{sebibliography}
+
+\end{document}
