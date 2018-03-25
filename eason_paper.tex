@@ -1,0 +1,112 @@
+\documentclass[11pt]{article}
+
+\usepackage[letterpaper,top=1.25in,bottom=1.25in,left=1.25in,right=1.25in]{geometry}
+\usepackage{setspace}
+\usepackage{indentfirst}
+
+\title{Evolution of Software Design Patterns}
+\author{James Eason}
+\date{19 March 2018}
+\begin{document}
+\maketitle
+
+\thispagestyle{empty}
+
+\begin{abstract}
+Software design patterns have evolved and gained popularity since their first documentation in the 1990s. The Gang of Four's influential 1994 book, \textit{Design Patterns}, provided the foundation for design patterns by introducing twenty three patterns in three different categories. Since then, design patterns have become an essential resource for modern developers, and many new design patterns in various areas of software engineering have been discovered and documented. The reason for the increased popularity of design patterns is that they lead to improved software designs, quicker development, and fewer errors. In the coming years, design patterns will remain an invaluable resource for software developers as more patterns are documented for new and existing technologies.
+\end{abstract}
+
+
+
+\doublespacing
+
+\section{Introduction}
+
+Over the past 40 years, design patterns have evolved from an architectural idea to an effective tool for designing software systems and communicating abstract software design concepts. The use of software design patterns results in a quicker development process with fewer errors.  In the future, design patterns will remain an essential tool for software engineers as new technologies develop and new patterns are documented.
+
+\section{Background}
+
+A design pattern is a reusable solution to a commonly occurring problem \cite{clarke2016}. In the context of software engineering, these are solutions to problems that developers encounter while building software. Rather than runnable code, design patterns provide templates which can be implemented by a developer  \cite{clarke2016}. Many programming problems have only a handful of ``good''  implementation approaches and many ``bad'' approaches \cite{agerbo1998}. Design patterns capture the experience of experts in a reusable way and use formalized best practices to find a ``good'' implementation approach to a problem  \cite{agerbo1998}.
+
+\subsection{The First Design Patterns}
+
+The origins of software design patterns can be traced back to architect Christopher Alexander's 1979 book, \textit{The Timeless Way of Building}. In this book, Alexander explores the idea of general, reusable solutions to common problems faced by architects  \cite{alexander1979}. These solutions are called patterns. In \textit{The Timeless Way of Building}, Alexander defines 253 different architectural design patterns and writes, ``each pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, without ever doing it the same way twice'' \cite{alexander1979}. Alexander also believes that the occupants of a building should be involved in its design \cite{alexander1979}. His ideas were originally intended to enable every citizen to design and construct their own home \cite{alexander1979}. 
+
+\subsection{A Computer Science Perspective}
+
+Although Alexander's goal was never achieved, and his ideas ended up having a more significant impact on computer science than on architecture. Ward Cunningham and Kent Beck are two of the early computer scientists that took an interest in Alexander's work \cite{cunningham2011}. In 1987, Cunningham and Beck were consultants working with a team which was having difficulties completing a Smalltalk project. Inspired by Alexander's ideas, they turned to the users to complete the software design \cite{beck1987}. They developed several patterns to help them take advantage of Smalltalk's strengths and avoid its weaknesses \cite{beck1987}. The experiment was a success, and the project was completed with an elegant interface designed by the users \cite{beck1987}.
+
+Ward Cunningham and Kent Beck presented their findings at the 1987 OOPSLA (Object-Oriented Programming, Systems, Languages, and Applications) conference in Orlando believing that design patterns could empower users to write their own programs \cite{beck1987}. This presentation inspired their colleagues to continue to explore design patterns in software \cite{arnold1999}. Design patterns quickly gained traction after Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides (known as the Gang of Four) released a book called \textit{Design Patterns: Elements of Reusable Object-Oriented Software} in 1994, which is widely considered one of the best sources for information on design patterns to this day \cite{clarke2016}.
+
+
+\subsection{The Gang of Four}
+
+
+In \textit{Design Patterns}, the Gang of Four defined core pattern names, provided details about the intent of patterns, and included code snippets to clarify suggested implementation in C++ \cite{gamma1995}. The Gang of Four also defined four essential elements required for any software design pattern: \textit{pattern name}, \textit{problem}, \textit{solution}, and \textit{consequences} \cite{gamma1995}. The \textit{pattern name} is simply the handle that can be used to describe the design problem, its solutions, and its consequences \cite{gamma1995}. The \textit{problem} gives context and explains when to apply the pattern \cite{gamma1995}. The \textit{solution} refers to the elements that make up the design, their responsibilities, relationships, and collaborations \cite{gamma1995}. The \textit{consequences} describe the results and trade-offs of applying the pattern \cite{gamma1995}. 
+
+The Gang of Four also divided design patterns into three categories: creational, structural, and behavior \cite{gamma1995}. Creational patterns focus on factories and other techniques that assist in the creation of objects \cite{gamma1995}. Singleton is an example of a popular creational pattern described in the book. Structural patterns are intended to provide structure for one or more classes to achieve an objective, and are concerned with how classes are composed to form larger structures of subsystems \cite{gamma1995}. Decorator is an example of a popular structural pattern described in the book. Behavior patterns deal with the inner workings of classes such as algorithms and the responsibility between classes \cite{gamma1995}. Iterator is an example popular behavioral pattern described in the book. 
+	
+	The Gang of Four explored 23 different design patterns in \textit{Design Patterns} \cite{gamma1995}. These patterns, along with the other ideas presented in the book, are widely regarded as the foundation for all other patterns \cite{clarke2016}. In 1987, the same year \textit{Design Patterns} was published, the first Pattern Languages of Programming Conference was held \cite{cunningham2011}. The following year, the Portland Pattern Repository was set up for documentation of design patterns \cite{cunningham2011}. Several other notable books have further documented and explored design patterns, including Kent Beck's \textit{Smalltalk Best Practice Patterns} (1997), Martin Fowler's \textit{Patterns of Enterprise Application Architecture}, and Kathy Sierra et al.'s \textit{Head First Design Patterns} (2004).
+
+
+\subsection{Anti-patterns}
+
+Coined by Andrew Koenig 1995 as a response to \textit{Design Patterns}, an anti-pattern is a common response to a recurring problem that is typically ineffective and risks being counterproductive \cite{doty}. Anti-patterns are typically associated with practical guidelines on refactoring solutions to correct them. There are two elements that distinguish an anti-pattern from a bad practice. First, it must be a commonly used pattern of action that has more bad consequences than good ones, despite initially appearing to be an appropriate response to a problem \cite{rising1998}. Second, another solution must exist that is documented, proven to be effective, and repeatable \cite{rising1998}. \textit{AntiPatterns: Refactoring Software, Architectures, and Projects in Crisis} is a book published in 1998 with the objective of building on the Gang of Four's concepts by providing constructive means for dealing with the frequent patterns of failure that the authors had professionally dealt with \cite{brown1998}. 
+
+Sequential coupling is one example of an anti-pattern \cite{rising1998}. Sequential coupling refers to a class that requires its methods to be called in a specific order \cite{rising1998}. It can be refactored with the template method pattern \cite{rising1998}. Some anti-patterns are former design patterns that are commonly misused. Singleton, for example, is considered by many to be an anti-pattern because it can introduce unnecessary restrictions \cite{densmore2004}. Proponents of anti-patterns argue that it is just as important to recognize bad solutions as it is to recognize good ones.
+
+\subsection{Additional Design Patterns}
+
+Since the release of the Gang of Four's influential book, several new categories of patterns have been added in addition to the original creational, structural, and behavioral categories discussed in \textit{Design Patterns}. Concurrency patterns are another category of design patterns that deal with multi-threaded programming \cite{sanden1997}. The thread pool pattern, for example, is a concurrency pattern which maintains a pool of threads waiting for tasks to be allocated for concurrent execution \cite{sanden1997}. The blockchain pattern, invented in 2008 by Satoshi Nakamoto for the cryptocurrency bitcoin, is an example of a relatively new concurrency pattern \cite{economist_2015}. 
+
+Architectural patterns are another category of design patterns that tend to address broader problems \cite{arnold1999}. Model-view-controller, or MVC, is an example of an architectural pattern \cite{arnold1999}. MVC is used to develop user interfaces using three separate, decoupled parts \cite{arnold1999}. Many programming languages such as Java, Ruby, and PHP have popular MVC frameworks. Peer-to-peer, or P2P, is another architectural pattern that partitions tasks between peers \cite{arnold1999}. This pattern was popularized by Napster in 1999 and has been used by other file-sharing networks \cite{arnold1999}.
+
+The number of software design patterns has expanded well beyond the original 23 presented in \textit{Design Patterns}, and not all of them can be neatly categorized. There is no finite, master list of all existing patterns since new ones are regularly being discovered and documented.
+
+
+\section{Analysis}
+
+Design patterns have evolved from Christopher Alexander's original architectural ideas into a tool used by software designers around the world. Some developers are not convinced of their usefulness, but many agree that the exploration and documentation of design patterns has had a positive impact on the field of software engineering.
+
+\subsection{Benefits}
+
+As design patterns have increased in popularity over the past few decades, the advantages of their use have become apparent. One advantage of the widespread use of design patterns is that they improve communication between developers by establishing a common language for developers to concisely express design options \cite{doty}. Rather than explaining a complex design in detail, a developer can simply reference the appropriate design pattern and be understood. By discussing the design at a higher level of abstraction, complicated systems can be simplified. This simplification helps make systems easier and quicker to understand \cite{doty}. Design patterns also decrease the possibility of ambiguity or misunderstanding that could occur by explaining the design in more detail. 
+
+The use of design patterns as a communication tool is particularly observable in open source systems. A 2004 study analyzed the difference between open source developers who use design patterns and those who do not \cite{hahsler2004}. The result indicated that ``the small number of developers that create most of the code (for OSS projects often called core developer) are more likely to use design patterns'' \cite{hahsler2004}. Effective communication can be challenging for open source development \cite{hahsler2004}. In most cases, there is not an explicit design document for new projects and the design emerges during implementation \cite{hahsler2004}. As a result, collaborating open source developers commonly use code to help communicate the design \cite{hahsler2004}. Since inferring design from code artifacts is typically difficult, design patterns serve to capture design practices and communicate them through naming conventions or even as short comments \cite{hahsler2004}.
+
+	Design patterns are also an effective learning tool for novice developers \cite{doty}. Since most large object-oriented systems use design patterns, understanding them can help new developers understand existing systems \cite{doty}. Additionally, design patterns can demonstrate how to use primitive techniques and provide solutions when new developers encounter problems \cite{doty}. By helping new developers come up to speed, design patterns accelerate the learning process and decrease the time that it takes for a novice to become an expert \cite{doty}.
+
+	Finally, design patterns lead to quicker development and reduced errors by promoting good design \cite{clarke2016}. The use of design patterns early in the development process can prevent later refactoring because design patterns capture the structures that result from refactoring \cite{clarke2016}. By avoiding future issues, design patterns speed up the development process \cite{clarke2016}. Even if design patterns are not applied until after the system is built, they demonstrate how to effectively refactor a design, reducing the possibility of errors or incorrect refactoring \cite{clarke2016}. 
+
+	Design patterns also save time by providing a path from the analysis model to the implementation model \cite{clarke2016}. Numerous books and resources provide a template for implementing each pattern, either in the form of code or a UML class diagram. Since the implementation of some patterns can vary between languages, different resources demonstrate the patterns in different languages. For instance, the Gang of Four's \textit{Design Patterns} provides examples in C++ and Smalltalk, Sierra et al.'s \textit{Head First Design Patterns} uses Java, and Fowler's \textit{Patterns of Enterprise Application Architecture} uses C\#. In each of these resources, the implementations have been tweaked according to the selected language's strengths and weaknesses. The ability to convert design patterns into code optimized for a specific language leads to a quicker and easier implementation with fewer errors.
+
+
+\subsection{Criticism}
+
+While design patterns are embraced by many software developers, others argue that they cause more problems than they are worth. Particularly in the hands of inexperienced users, design patterns can lead to unnecessary complexity and unwanted effects \cite{dominus2002}. Some argue that the temptation to use design patterns can discourage developers from using simpler, more effective solutions \cite{dominus2002}. 
+
+Another criticism of design patterns is that they only serve to replace missing features in a programming language. The Iterator pattern, for example, is useful in C++ but much less relevant in a language with a stronger type system such as Perl \cite{dominus2002}. Peter Norvig, current director of research at Google, demonstrated that 16 out of the 23 patterns presented by the Gang of Four can be simplified or eliminated by using Lisp rather than C++ \cite{norvig1996}. Norvig has also famously stated that ``design patterns are bug reports against your programming language'' \cite{norvig1996}. Some developers argue that there is no need for design patterns, just better programming languages.
+
+
+\subsection{The Future of Design Patterns}
+
+Since the publication of the Gang of Four's \textit{Design Patterns}, the ability of developers to understand and use patterns effectively on software projects has increased \cite{buschmann2007}. The quality of new patterns has also increased, resulting in the discovery of comparatively more expressive, comprehensive, precise, and readable patterns \cite{buschmann2007}. This trend will most likely continue as more technology and domain-specific patterns are documented \cite{buschmann2007}. There are many new technologies which have yet to be addressed by patterns. In order to document patterns, experience with the technology must be gained and evaluated \cite{buschmann2007}. Based on past trends, patterns will continue to be documented for newer technologies as experienced is gained \cite{buschmann2007}. Specifically, an analysis by computer scientists Frank Buschmann, Kevlin Henney, and Douglas Schmidt attempts to identify several areas that will be further addressed by design patterns in the coming years \cite{buschmann2007}.
+
+Mobile systems are one area that will likely see more documented design patterns in the future \cite{buschmann2007}. Embedded devices are becoming thinner, lighter, and more powerful, and there is a growing demand for applications that can handle the challenges that mobile systems present \cite{buschmann2007}. Limited resources, varying power, and disruptions in connectivity and service quality are several examples of specific obstacles that mobile developers face \cite{buschmann2007}. With no end to the smartphone trend in sight, Buschmann et al. argue that more design patterns for mobile systems are inevitable \cite{buschmann2007}. 
+
+Group interaction is another area identified by Buschmann et al. as a potential topic of future design patterns \cite{buschmann2007}. There is a growing demand for electronic collaboration, or human-computer-human interaction \cite{buschmann2007}. Systems like virtual worlds and games which simultaneously support a large number of users could lead to the documentation of new design patterns \cite{buschmann2007}.
+
+Process and organizational structure is a third area that Buschmann et al. address \cite{buschmann2007}. Agile processes have already lead to the development of some related patterns, and as agile increases in popularity, the number of documented patterns will likely also increase \cite{buschmann2007}. These patterns may focus on broad aspects such as the overall lifecycle or on more specific aspects such as test-driven development or refactoring \cite{buschmann2007}.
+
+As long as new technologies are being developed, the demand for new design patterns will remain. The documentation of new patterns will continue to aid developers of all experience levels to communicate with each other and produce well designed software systems.
+
+\section{Conclusion}
+
+Despite the views of some critics, many modern software engineers have embraced the design patterns documented by the Gang of Four and others. The reason for this is that design patterns have significant, observable positive effects on the software development process. Design patterns give developers the ability to succinctly and accurately communicate complex ideas, as well as a path to implement these ideas quickly and with minimal errors. For these reasons, design patterns will likely continue to grow in popularity, and the demand for new design patterns for the latest technologies will continue to grow as well. Design patterns are an essential tool for any modern software engineer to be well-informed and successful.
+
+\begin{singlespace}
+
+\bibliographystyle{ieeetr}
+\bibliography{sebibliography}
+\end{singlespace}
+\end{document}
