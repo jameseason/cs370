@@ -1,0 +1,76 @@
+\documentclass[11pt]{article}
+
+\usepackage[letterpaper,top=1.25in,bottom=1.25in,left=1.25in,right=1.25in]{geometry}
+\usepackage{setspace}
+\usepackage{indentfirst}
+
+\title{Midterm}
+\author{James Eason}
+\date{30 March 2018}
+\begin{document}
+\maketitle
+
+\thispagestyle{empty}
+
+\doublespacing
+
+\section{Summary}
+
+In \textit{Simple Testing Can Prevent Most Critical Failures}, Yuan investigates user-reported failures that occurred on several large systems in use today \cite{yuan2014}. He finds that most catastrophic failures --- where most or all users experience an outage or data loss --- could have been prevented with simple testing on error handling code \cite{yuan2014}. 
+
+Yuan developed a rule-based static checker called Aspirator, which is capable of catching many trivial mistakes that often lead to catastrophic failures \cite{yuan2014}. He asserts that Aspirator's functionality should be added to existing static analysis tools, citing that 33\% of the studied catastrophic failures would have been prevented by running Aspirator \cite{yuan2014}.
+
+In addition to a tool such as Aspirator, Yuan suggests several other techniques for reducing failures. First, code reviews on error-handling code should be enforced, since many of the studied errors stem from incorrect error handling logic \cite{yuan2014}. Second, extended symbolic execution techniques should be used to reconstruct execution paths that can reach each error handling code block \cite{yuan2014}. 
+
+
+\section{Usage of \textit{fault}, \textit{error}, and \textit{failure}}
+
+According to Yuan, a fault is the ``initial root cause, which could be a hardware malfunction, a software bug, or a misconfiguration'' \cite{yuan2014}. An error describes the abnormal behaviors produced by a fault \cite{yuan2014}. A failure describes errors which are inappropriately handled by the software, resulting in a system malfunction that is noticed by the end user or operators \cite{yuan2014}.
+
+In class, an error describes the initial human’s mistake \cite{beck118}. A fault is what occurs in the software after the human messes up \cite{beck118}. This is seen by developers \cite{beck118}. Finally, a failure is when the system departs from its requirements or specified behavior as a result of a fault \cite{beck118}.
+
+Yuan’s definitions are similar to those discussed in class, with the key difference being that error and fault are switched. Failure has essentially the same definition in both contexts.
+
+
+\section{Comparison}
+
+In Jackson’s 2009 paper, he argues that while testing is an essential part of making good software, it will never be perfect, especially for larger and more complex systems \cite{jackson2009}. Alternatively, he suggests that developers should provide direct evidence that their system upholds the critical properties \cite{jackson2009}.
+
+Yuan advocates for improved testing. He argues that most failures are easily preventable by improving testing on error handling code and using tools like Aspirator to discover issues \cite{yuan2014}. Yuan demonstrates how many real world critical failures could have been prevented through improved testing techniques \cite{yuan2014}.
+
+Both authors agree that testing is an essential part of the development process, and that developers could be doing a better job of preventing critical failures. They disagree, however, on how to prevent critical failures. Yuan argues that  improved testing is the solution, while Jackson believes that testing will never be sufficient and a direct approach is the only way to guarantee the dependability of software \cite{yuan2014, jackson2009}.
+
+
+\section{Requirements Document Statements}
+
+\subsection{For a personal checkbook system: \textit{It must be easy for the user to correct mistakes.}}
+
+As is, this statement does not belong in a requirements document because ``easy'' is not measurable. \textit{The system shall allow the user to correct mistakes} would be a valid functional requirement because it describes what the system should do.
+
+\subsection{For a personal checkbook system: \textit{From this screen the system will allow a user to sort checks by check number, by date, by amount, or by payee.}}
+
+As is, this statement does not belong in a requirements document because ``\textit{From this screen}'' describes the design of the system rather than the requirements.  If these words are removed, the statement does belong in the requirements document: \textit{The system will allow a user to sort checks by check number, by date, by amount, or by payee}. This is a functional requirement because it describes what the system should do.
+
+\subsection{For a personal checkbook system: \textit{The system will sort the deposit slips according to date of deposit. For each deposit slip, an entry will be found in the statement that matches the date of deposit and the amount of the deposit, and that entry will be marked. If no such entry is found, then the statement is in error.}}
+
+This statement belongs in the requirements document, but needs to be divided into two requirements. First, \textit{The system will sort the deposit slips according to date of deposit}. Second, \textit{For each deposit slip, the system shall store the date of deposit and amount of deposit in an entry in the statement}. These are both functional requirements because they describe what the system should do.
+
+\subsection{For a pharmacy system: \textit{If a patient is known to be allergic to a particular medication, prescribing that medication shall cause a warning message to be displayed.}}
+
+This statement does belong in the requirements document as a functional requirement because it describes what the system should do. 
+
+\subsection{For a text processing system: \textit{The system will process text files with a maximum size of one gigabyte.}}
+
+This statement does belong in the requirements document as a non-functional requirement because it establishes constraints on how the system should perform its function.
+
+\subsection{For a membership management system: \textit{Contribution amounts will be stored as Doubles.}}
+
+This statement does not belong in the requirements document because it describes the implementation and does not use the user's terminology. 
+
+
+\begin{singlespace}
+
+\bibliographystyle{ieeetr}
+\bibliography{sebibliography}
+\end{singlespace}
+\end{document}
